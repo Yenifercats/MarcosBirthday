@@ -1,1 +1,20 @@
 # MarcosBirthday
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Design.css">
+    </head>
+    <body>
+        <div class="birthday-card">
+            <input id="open" type="checkbox">
+            <label class="open" for="open"></label>
+            <div class="card-front">
+                <div class="note">click to open</div>
+            </div>
+            <div class="card-inside">
+                <div class="text-one">Happy 21'st Birthday! <img src="https://media.tenor.com/i09NCrfMbLQAAAAM/%E5%B0%8F%E7%86%8A%E4%B8%8E%E5%B0%8F%E7%86%8A%E7%8C%AB.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Cute Birthday GIFs | Tenor" data-noaft="1" style="width: 220px; height: 220px; margin: 0px;"></div>
+                <div class="heart"></div>
+            </div>
+        </div>
+    </body>
+</html>
