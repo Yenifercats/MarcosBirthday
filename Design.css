@@ -4,6 +4,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(224, 53, 53);
 }
 
 input#open {
@@ -21,7 +22,7 @@ input#open {
 
 .card-front {
     position: relative;
-    background-color: rgb(243, 231, 231);
+    background-color: rgb(255, 254, 254);
     width: 300px;
     height: 300px;
     transform-origin: left;
@@ -29,19 +30,18 @@ input#open {
     transition: .3s;
 }
 
-.card-front::before {
+.card-front:before {
     content:"";
     position: absolute;
     width: 280px;
     height: 280px;
-    background-color: rgb(81, 185, 177);
     top: 10px;
     left: 10px;
 }
 
 .card-inside {
     position: absolute;
-    background-color: #ffff0f3;
+    background-color:  #fffdfd;
     width: 300px;
     height: 300px;
     z-index: -1;
@@ -64,8 +64,62 @@ input#open {
 
 #open:checked ~ .card-front{
     transform: rotateY(-155deg);
-    box-shadow: inset 100x 20px 100px rgba(0.0.0..13) 30px 0 50px rgba(0,0,0,0.1);
 
 }
 
-#open: checked
+#open:checked ~ .card-front:before{
+    z-index: 5;
+    background-color: #fff0f3;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.1), 30px 0 50px rgb(0,0,0,0.1);
+}
+
+.note {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    top: 75px;
+    left: 50px;
+    color: #333;
+    background-color: hsl(0, 16%, 96%);
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
+}
+
+.note:before, .note:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(224, 53, 53);
+    width: 40px;
+    height: 40px;
+
+}
+
+.note:before {
+    transform: rotate(-45deg);
+    top: -20px;
+    left: 80px;
+
+}
+
+.note:after {
+    border-radius: 50%;
+    top: -35px;
+    left: 65px;
+    box-shadow: 30px 0 rgb(224, 53, 53);
+}
+
+.text-one {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    top: 30px;
+    width: 300px;
+    text-align: center;
+}
